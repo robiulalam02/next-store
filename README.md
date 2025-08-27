@@ -1,8 +1,9 @@
 # Next Store | Ecommerce Website
 
-Project Description
+## Project Description
 This is a simple Next.js 15 application demonstrating public and protected pages with basic authentication using NextAuth.js. Users can view a landing page, browse products, see product details, and, once authenticated, access a protected dashboard to add new products.
-Core Features:
+
+## Core Features:
 
 Landing page with Navbar, Hero, Product Highlights, and Footer.
 
@@ -14,7 +15,7 @@ Protected Add Product page accessible only to logged-in users.
 
 Optional enhancements like loading spinners, toast notifications, and theme toggle.
 
-Setup & Installation
+## Setup & Installation
 
 Clone the Repository
 git clone https://github.com/your-username/nextjs-product-app.git
@@ -23,17 +24,6 @@ cd nextjs-product-app
 
 Install Dependencies
 npm install
-
-Environment Variables
-Create a .env.local file in the root directory and add the following (update with your own credentials):
-NEXTAUTH_URL=http://localhost:3000
-
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-NEXTAUTH_SECRET=your-nextauth-secret
-
-If using a database for product storage:
-DATABASE_URL=your-database-connection-string
 
 Run the Development Server
 npm run dev
@@ -44,7 +34,7 @@ Build for Production
 npm run build
 npm start
 
-Route Summary
+## Route Summary
 
 / : Landing page with Navbar, Hero, Product Highlights, Footer (Public)
 /login : Login page with NextAuth authentication (Public)
@@ -54,7 +44,7 @@ Route Summary
 /api/products : API route to fetch products (Public)
 /api/products/add : API route to add a product (Protected)
 
-Technologies Used
+## Technologies Used
 
 Next.js 15 (App Router)
 
