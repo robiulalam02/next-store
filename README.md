@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Store | Ecommerce Website
 
-## Getting Started
+Project Description
+This is a simple Next.js 15 application demonstrating public and protected pages with basic authentication using NextAuth.js. Users can view a landing page, browse products, see product details, and, once authenticated, access a protected dashboard to add new products.
+Core Features:
 
-First, run the development server:
+Landing page with Navbar, Hero, Product Highlights, and Footer.
 
-```bash
+Public product list and detailed product pages.
+
+Authentication via NextAuth (Google or credentials).
+
+Protected Add Product page accessible only to logged-in users.
+
+Optional enhancements like loading spinners, toast notifications, and theme toggle.
+
+Setup & Installation
+
+Clone the Repository
+git clone https://github.com/your-username/nextjs-product-app.git
+
+cd nextjs-product-app
+
+Install Dependencies
+npm install
+
+Environment Variables
+Create a .env.local file in the root directory and add the following (update with your own credentials):
+NEXTAUTH_URL=http://localhost:3000
+
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+NEXTAUTH_SECRET=your-nextauth-secret
+
+If using a database for product storage:
+DATABASE_URL=your-database-connection-string
+
+Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000
+ to view the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for Production
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Route Summary
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/ : Landing page with Navbar, Hero, Product Highlights, Footer (Public)
+/login : Login page with NextAuth authentication (Public)
+/products : List of all products (Public)
+/products/[id] : Product details page (Public)
+/dashboard/add-product : Form to add a new product (Protected, authenticated users only)
+/api/products : API route to fetch products (Public)
+/api/products/add : API route to add a product (Protected)
 
-## Learn More
+Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+Next.js 15 (App Router)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NextAuth.js for authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+React for frontend components
 
-## Deploy on Vercel
+Optional: Tailwind CSS, toast notifications, theme toggler
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Features to Enhance
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Loading spinners on form submission
+
+Toast messages on successful product addition
+
+Light/Dark theme toggle

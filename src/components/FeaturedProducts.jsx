@@ -3,9 +3,7 @@ import ProductCard from './ProductCard';
 
 async function getProducts() {
   try {
-    const res = await fetch("https://next-store-server-pi.vercel.app/products/featured", {
-      cache: "no-store",
-    });
+    const res = await fetch("https://next-store-server-pi.vercel.app/products/featured");
     console.log(res)
     if (!res.ok) {
       throw new Error("Failed to fetch products");
