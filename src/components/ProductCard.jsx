@@ -4,7 +4,7 @@ import React from 'react'
 const ProductCard = ({ product }) => {
     const { image, price, name, description } = product;
     return (
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div className='h-80 w-full overflow-hidden rounded-t-lg'>
                 <img className="h-full w-full object-cover" src={image} alt="product image" />
             </div>

@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from "@/components/Footer";
 import Providers from "./providers";
 import { Toaster } from "sonner";
-import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

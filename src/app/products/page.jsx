@@ -19,7 +19,7 @@ async function getProducts() {
 const AllProducts = async () => {
   const products = await getProducts();
   return (
-    <div className='my-10'>
+    <div className='my-10 px-4'>
       <h2 className='text-center text-2xl font-bold'>All Products</h2>
 
       {products.length === 0 ? (

@@ -10,7 +10,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Hero = () => {
     return (
-        <div className='h-[600px]'>
+        <div className='lg:h-[600px]'>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={30}

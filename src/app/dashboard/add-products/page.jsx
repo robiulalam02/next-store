@@ -36,11 +36,11 @@ export default function AddProductPage() {
       setLoading(false);
 
       if (result.success) {
-        alert("Product added successfully!");
+        toast("Product Added Successfully");
         reset(); // clear form after success
         router.push("/products");
       } else {
-        alert("Error: " + result.error);
+        toast.error("Something went wrong!")
       }
     } catch (err) {
       setLoading(false);
