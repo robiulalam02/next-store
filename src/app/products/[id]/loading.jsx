@@ -1,7 +1,7 @@
 // app/products/[id]/loading.jsx
 export default function Loading() {
     return (
-        <div className="max-w-screen-xl mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 animate-pulse">
+        <div className="max-w-screen-xl min-h-screen mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 animate-pulse">
             {/* Image placeholder */}
             <div className="h-80 w-full bg-gray-200 rounded-t-lg dark:bg-gray-700" />
 

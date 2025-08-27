@@ -24,27 +24,27 @@ const ProductDetailsPage = async ({ params }) => {
 
     return (
         <div className="max-w-screen-xl mx-auto px-6 py-10">
-            <Link href="/all-products" className="text-sm text-blue-600">
+            {/* <Link href="/all-products" className="text-sm text-blue-600">
                 Back to products
-            </Link>
+            </Link> */}
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-[400px] object-cover rounded-lg"
+                        className="w-full h-[400px] object-cover rounded-lg shadow-lg"
                     />
                 </div>
 
                 <div className='space-y-6'>
                     <div>
                         <h1 className="text-2xl font-bold">{product.name}</h1>
-                        <p className="text-gray-500">Price: <span className="font-semibold text-lg">${product.price}</span></p>
+                        <p className="text-gray-500 dark:text-gray-50">Price: <span className="font-semibold text-lg">${product.price}</span></p>
                     </div>
-                    <p className="text-gray-700">{product.description}</p>
+                    <p className="text-gray-700 dark:text-gray-50">{product.description}</p>
 
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-500 dark:text-gray-50">
                         <p>Added: {new Date(product.createdAt).toLocaleDateString()}</p>
                         {/* show product id for debugging/admin */}
                     </div>
