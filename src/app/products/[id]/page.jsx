@@ -4,7 +4,7 @@ import React from 'react'
 
 async function getProductById(id) {
     // use no-store so it always fetches fresh
-    const res = await fetch(`http://localhost:5000/products/${id}`);
+    const res = await fetch(`https://next-store-server-pi.vercel.app/products/${id}`);
 
     if (!res.ok) {
         return null;

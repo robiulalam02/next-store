@@ -27,7 +27,7 @@ export default function AddProductPage() {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/products", {
+      const res = await fetch("https://next-store-server-pi.vercel.app/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

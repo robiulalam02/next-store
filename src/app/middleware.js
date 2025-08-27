@@ -8,5 +8,5 @@ export default withAuth({
 });
 
 export const config = {
-  matcher: ["/add-products"], // protect /add-product route
+  matcher: ["/dashboard/add-products"], // protect /add-product route
 };

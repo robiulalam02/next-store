@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from "@/components/Footer";
 import Providers from "./providers";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,13 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Navbar />
-          <main className="min-h-screen max-w-screen-xl mx-auto">
-            {children}
-          </main>
-          <Footer />
+          <ThemeProvider>
+            <Navbar />
+            <main className="min-h-screen max-w-screen-xl mx-auto">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
         </Providers>
         <Toaster />
       </body>
