@@ -3,7 +3,9 @@ import React from 'react'
 
 async function getProducts() {
   try {
-    const res = await fetch("https://next-store-server-pi.vercel.app/products");
+    const res = await fetch("https://next-store-server-alpha.vercel.app/products",{
+      cache: "no-store",
+    });
     console.log(res)
     if (!res.ok) {
       throw new Error("Failed to fetch products");
